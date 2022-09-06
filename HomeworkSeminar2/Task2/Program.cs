@@ -4,16 +4,16 @@
 
 Console.Write("Введите трехзначное число: ");
 int x = Convert.ToInt32(Console.ReadLine()); 
-int num = x%10;
+int num = x/100%10;
 Console.WriteLine(num);
 
-if (num>3)
+if(num<=3)
 {
-  Console.WriteLine("третья цифра -> " + num);
+   Console.WriteLine("третьей цифры нет"); 
 }
-else if (num<3) 
-{
-  Console.WriteLine("третьей цифры нет -> ");
+else 
+{Console.WriteLine("третья цифра");
+   
 }
 
 // Console.Write("Введите трехзначное число: ");
