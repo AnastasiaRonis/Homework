@@ -28,47 +28,26 @@ void FillArray(int[,] array)
 
 void PrintArray(int[,] array)
 {
-    System.Console.WriteLine("Введите x: ");
-    int x = Convert.ToInt32(Console.ReadLine());
-    bool w = false;
-    for (int i = 0; i < array.GetLength(0); i++)
+    
+    for (int i = 0; i < array.GetLength(0)+1; i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1)-1; j++)
         {
-            if (array[i, j] == x)
+            System.Console.WriteLine("Введите x: ");
+            int x = Convert.ToInt32(Console.ReadLine());    
+            bool w = false;
+            if (array[i, j] >= x)
             {
                 w = true;
             }
             if (w == false)
             {
                 Console.WriteLine("Не присутствует");
-                Console.ReadKey();
+                Console.WriteLine();
             }
             else Console.WriteLine("Присутствует");
-            Console.ReadKey();
-        }
-        Console.ReadKey();
+                Console.WriteLine();
+        }        
+        break;
     }
 }
-
-
-// if((ChekNumberInArray(array),q)==false)
-// {
-//     System.Console.WriteLine("Yes");
-// }
-// else System.Console.WriteLine("No");
-
-// bool ChekNumberInArray (int[,] array, int q)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             if(array[i,j]==q)
-//             {
-//                 w=true;
-//             }
-//         }
-//         return false;
-//     }
-// }

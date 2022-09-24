@@ -21,3 +21,6 @@ void FillArray (double[,] array)
         System.Console.WriteLine();
     }
 }
+
+
+
